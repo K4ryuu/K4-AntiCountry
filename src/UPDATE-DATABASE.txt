@@ -1,0 +1,1 @@
+You can update the country database anytime by downloading the latest release from "GeoLite2-Country.mmdb" at https://github.com/P3TERX/GeoLite.mmdb/releases
