@@ -1,11 +1,11 @@
 <a name="readme-top"></a>
 
-![GitHub tag (with filter)](https://img.shields.io/github/v/tag/K4ryuu/CS2-AntiCountry?style=for-the-badge&label=Version)
-![GitHub Repo stars](https://img.shields.io/github/stars/K4ryuu/CS2-AntiCountry?style=for-the-badge)
-![GitHub issues](https://img.shields.io/github/issues/K4ryuu/CS2-AntiCountry?style=for-the-badge)
-![GitHub](https://img.shields.io/github/license/K4ryuu/CS2-AntiCountry?style=for-the-badge)
-![GitHub all releases](https://img.shields.io/github/downloads/K4ryuu/CS2-AntiCountry/total?style=for-the-badge)
-![GitHub last commit (branch)](https://img.shields.io/github/last-commit/K4ryuu/CS2-AntiCountry/dev?style=for-the-badge)
+![GitHub tag (with filter)](https://img.shields.io/github/v/tag/K4ryuu/K4-AntiCountry?style=for-the-badge&label=Version)
+![GitHub Repo stars](https://img.shields.io/github/stars/K4ryuu/K4-AntiCountry?style=for-the-badge)
+![GitHub issues](https://img.shields.io/github/issues/K4ryuu/K4-AntiCountry?style=for-the-badge)
+![GitHub](https://img.shields.io/github/license/K4ryuu/K4-AntiCountry?style=for-the-badge)
+![GitHub all releases](https://img.shields.io/github/downloads/K4ryuu/K4-AntiCountry/total?style=for-the-badge)
+![GitHub last commit (branch)](https://img.shields.io/github/last-commit/K4ryuu/K4-AntiCountry/dev?style=for-the-badge)
 
 <!-- PROJECT LOGO -->
 <br />
@@ -16,11 +16,11 @@
 
   <p align="center">
     <br />
-    <a href="https://github.com/K4ryuu/CS2-AntiCountry/releases">Download</a>
+    <a href="https://github.com/K4ryuu/K4-AntiCountry/releases">Download</a>
     ·
-    <a href="https://github.com/K4ryuu/CS2-AntiCountry/issues/new?assignees=KitsuneLab-Development&labels=bug&projects=&template=bug_report.md&title=%5BBUG%5D">Report Bug</a>
+    <a href="https://github.com/K4ryuu/K4-AntiCountry/issues/new?assignees=KitsuneLab-Development&labels=bug&projects=&template=bug_report.md&title=%5BBUG%5D">Report Bug</a>
     ·
-    <a href="https://github.com/K4ryuu/CS2-AntiCountry/issues/new?assignees=KitsuneLab-Development&labels=enhancement&projects=&template=feature_request.md&title=%5BREQ%5D">Request Feature</a>
+    <a href="https://github.com/K4ryuu/K4-AntiCountry/issues/new?assignees=KitsuneLab-Development&labels=enhancement&projects=&template=feature_request.md&title=%5BREQ%5D">Request Feature</a>
   </p>
 </div>
 
