@@ -20,17 +20,20 @@ public sealed class PluginConfig : BasePluginConfig
 	[JsonPropertyName("KickUnknwon")]
 	public bool KickUnknownCountry { get; set; } = true;
 
+	[JsonPropertyName("WhitelistMode")]
+	public bool WhitelistMode { get; set; } = false;
+
 	[JsonPropertyName("ConfigVersion")]
-	public override int Version { get; set; } = 1;
+	public override int Version { get; set; } = 2;
 }
 
 [MinimumApiVersion(198)]
 public class PluginCountryBlocker : BasePlugin, IPluginConfig<PluginConfig>
 {
-	public override string ModuleName => "CS2 Country Blocker";
+	public override string ModuleName => "K4 Country Blocker";
 	public override string ModuleAuthor => "K4ryuu";
 	public override string ModuleDescription => "Block players from specific countries from joining the server.";
-	public override string ModuleVersion => "1.0.0";
+	public override string ModuleVersion => "1.1.0";
 
 	public required PluginConfig Config { get; set; } = new PluginConfig();
 
@@ -61,7 +64,9 @@ public class PluginCountryBlocker : BasePlugin, IPluginConfig<PluginConfig>
 
 			string countryCode = GetPlayerCountryCode(player);
 
-			if (Config.BlockedCountries.Contains(countryCode, StringComparer.OrdinalIgnoreCase) || (Config.KickUnknownCountry && countryCode == "??"))
+			bool countryOnList = Config.BlockedCountries.Contains(countryCode, StringComparer.OrdinalIgnoreCase);
+
+			if ((Config.WhitelistMode != countryOnList) || (Config.KickUnknownCountry && countryCode == "??"))
 			{
 				if (Config.SteamIDWhitelist.Contains(player.SteamID.ToString()))
 					return;
