@@ -20,6 +20,9 @@ public sealed class PluginConfig : BasePluginConfig
 	[JsonPropertyName("KickUnknwon")]
 	public bool KickUnknownCountry { get; set; } = true;
 
+	[JsonPropertyName("LogConnections")]
+	public bool LogConnections { get; set; } = true;
+
 	[JsonPropertyName("WhitelistMode")]
 	public bool WhitelistMode { get; set; } = false;
 
@@ -33,7 +36,7 @@ public class PluginCountryBlocker : BasePlugin, IPluginConfig<PluginConfig>
 	public override string ModuleName => "K4 Country Blocker";
 	public override string ModuleAuthor => "K4ryuu";
 	public override string ModuleDescription => "Block players from specific countries from joining the server.";
-	public override string ModuleVersion => "1.1.0";
+	public override string ModuleVersion => "1.1.1";
 
 	public required PluginConfig Config { get; set; } = new PluginConfig();
 
@@ -59,10 +62,13 @@ public class PluginCountryBlocker : BasePlugin, IPluginConfig<PluginConfig>
 		{
 			CCSPlayerController? player = Utilities.GetPlayerFromSlot(slot);
 
-			if (player is null || !player.IsValid || !player.PlayerPawn.IsValid || player.IsBot || player.IsHLTV || player.IpAddress == null)
+			if (player is null || !player.IsValid || player.IsBot || player.IsHLTV || player.IpAddress == null)
 				return;
 
 			string countryCode = GetPlayerCountryCode(player);
+
+			if (Config.LogConnections)
+				Logger.LogInformation($"Player {player.PlayerName} ({player.SteamID}) connected from {countryCode}");
 
 			bool countryOnList = Config.BlockedCountries.Contains(countryCode, StringComparer.OrdinalIgnoreCase);
 
